@@ -3,25 +3,26 @@ let userGuess;
 
 console.log(randomNumber)
 let attempts = 0;
-userGuess = Number(userGuess)
+
 while (userGuess != randomNumber) {
-    let userGuess = prompt("guess the number")
+    userGuess = prompt("guess the number")
+    userGuess = Number(userGuess)
+    attempts++; 
 
     if (userGuess == randomNumber) {
-        alert(`Congratulations, you've guessed it in ${userGuess}!`);
-
+        alert(`Congratulations, you've guessed it in ${attempts} attempts!`);
         break
     }
-    else if (userGuess > randomNumber && userGuess != 999) {
+    else if (userGuess === 999) {
+        break
+    }
+    else if (userGuess > randomNumber) {
         alert("Too high");
         continue;
     }
     else if (userGuess < randomNumber) {
         alert("Too low");
         continue;
-    }
-    else if (userGuess = 999) {
-        break
     }
     else {
         alert("Invalid Input")
