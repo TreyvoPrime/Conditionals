@@ -1,5 +1,5 @@
 let randomNumber = Math.floor(Math.random() * 10) + 1;
-let userGuess = prompt("guess the number")
+let userGuess;
 
 console.log(randomNumber)
 let attempts = 0;
